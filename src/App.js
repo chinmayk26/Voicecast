@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
-import Home from './pages/homepage';
+import Home from './pages/Homepage/homepage';
 import Audio_Book from './pages/audiobook';
 import Video_Book from './pages/videobook';
 import SignUp from './pages/signup';
