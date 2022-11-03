@@ -1,8 +1,9 @@
 import React from "react";
 import { Nav, NavLink,  NavLink2, NavMenu } 
     from "./Nav_elements";
+import Avatar from "../avatar";
   
-const Navbar = () => {
+const Navbar = ({islogin}) => {
   return (
     <>
       <Nav>
@@ -20,9 +21,7 @@ const Navbar = () => {
             Live Rooms
           </NavLink>
         </NavMenu>
-        <NavLink2 to="/sign-up" activeStyle>
-            Sign Up
-          </NavLink2>
+        {islogin.login?<NavLink2 to="/sign-up" activeStyle>sign Up/in</NavLink2>:<NavLink to='/profile'><Avatar img='src\assets\index1.jpeg'/></NavLink>}
       </Nav>
     </>
   );
