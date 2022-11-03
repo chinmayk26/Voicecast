@@ -8,11 +8,12 @@ import Audio_Book from './pages/audiobook';
 import Video_Book from './pages/videobook';
 import SignUp from './pages/signup';
 import LiveRoom from './pages/live_room';
+import Profile from './pages/profile';
   
 function App() {
 return (
     <Router>
-    <Navbar />
+    <Navbar islogin={{login:false}}/>
     <Routes>
         <Route exact path='/' exact element={<Home/>} />
         <Route path='/homepage'  element={<Home/>} />
@@ -20,6 +21,7 @@ return (
         <Route path='/videobook' element={<Video_Book/>} />
         <Route path='/liveroom' element={<LiveRoom/>} />
         <Route path='/sign-up' element={<SignUp/>} />
+        <Route path='/profile' element={<Profile/>}/>
     </Routes>
     </Router>
 );
